@@ -1,7 +1,7 @@
 http:
   routers:
     traefik-dashboard:
-      rule: "Host(`DashBoard.DcTraeFikSrv.pallisanchaybank.gov.bd`)"
+      rule: "Host(`DcTraeFikSrv.pallisanchaybank.gov.bd`)"
       entryPoints:
         - web
       service: api@internal
