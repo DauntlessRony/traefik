@@ -1,0 +1,15 @@
+http:
+  routers:
+    traefik-dashboard:
+      rule: "Host(`DashBoard.DcTraeFikSrv.pallisanchaybank.gov.bd`)"
+      entryPoints:
+        - web
+      service: api@internal
+      middlewares:
+        - dashboard-auth
+
+  middlewares:
+    dashboard-auth:
+      basicAuth:
+        users:
+          - "admin:$apr1$H6uskkkW$IgXLP6ewTrSuBkTrqE8wj/"
